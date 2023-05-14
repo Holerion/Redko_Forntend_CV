@@ -1,0 +1,224 @@
+.list-caption{
+    margin-left: 25px;
+    margin-bottom: 25px;
+    margin-top: 30px;
+    text-transform: uppercase;
+
+}
+
+.list-circle{    
+    a{
+        opacity: 1;
+        display: inline-block;
+
+        margin-bottom: 15px;
+    }
+
+    li{
+        border-left:1px solid black ;
+        padding: 15px;
+        padding-bottom: 30px;
+        
+        position: relative;
+
+        &:first-child{
+            &::before{
+                content: '';
+                position: absolute;
+                width: 20%;
+                height: 70%;
+                border-top: 1px solid rgba(0, 0, 0, 0.5);
+                border-left: 1px solid rgba(0, 0, 0, 0.5);
+                top: -30px;
+                left: -30px;
+                filter: blur(5px);
+            }
+        }
+        
+        
+        &:last-child{
+            padding-bottom: 0px;
+            margin-bottom: 25px;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 20%;
+                height: 70%;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                border-right: 1px solid rgba(0, 0, 0, 0.5);
+                bottom: 0;
+                right: 0;
+                filter: blur(5px);
+            }
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border: 2px solid black;
+            background-color: $main-color;
+            border-radius: 50%;
+            top: -8px;
+            left: -8px;
+        }
+    }
+
+    p{
+        opacity: 0.7;
+    }
+}
+
+
+
+
+.gallery {
+    display: flex;
+    padding: 2px;
+    transition: .3s;
+
+    a{
+        opacity: 1;
+    }
+    
+    &:hover &__image {
+        filter: grayscale(1);
+    }
+    
+    &__column {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    
+    &__link {
+        margin: 2px;
+        overflow: hidden;
+        
+        &:hover {
+            .gallery__image {
+                filter: grayscale(0);
+            }
+            
+            .gallery__caption {
+                opacity: 1;
+            }
+        }
+    }
+    
+    &__thumb {
+        position: relative;
+    }
+    
+    &__image {
+        display: block;
+        width: 100%;
+        transition: .3s;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    
+    &__caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 25px 15px 15px;
+        width: 100%;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.5em;
+        color: white;
+        opacity: 0;
+        background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+        transition: .3s;
+
+
+        h2{
+            margin-bottom: 10px;
+        }
+        .tec{
+            display: flex;
+            li{
+                background-color: rgb(0, 0, 0);
+                padding: 10px 25px ;
+                border-radius: 50px;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100,400);
+@keyframes load{0%{stroke-dashoffset:0}}
+.progress {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+    &>li {
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-family: Lato;
+        font-weight:100;
+        margin: 2rem;
+
+        border-radius: 50%;
+        background-color: $main-color;
+        
+        &:before {
+            content: attr(data-name);
+            position: absolute;
+            width: 100%;
+            bottom: -2rem;
+            font-weight:400;
+            font-size: 1.2em;
+        }
+        &:after {
+            content: attr(data-percent);
+            position: absolute;
+            width: 100%;
+            top: 5rem;
+            left: 0;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+    svg {
+        width: 12rem;
+        height: 12rem;
+        &:nth-child(2) {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: rotate(-90deg);
+        }
+        &:nth-child(2) path {
+            fill: none;
+            stroke-width: 25;
+            stroke-dasharray: 629;
+            stroke: $main-color;
+            opacity:.9;
+            animation: load 10s;
+        }
+    }
+}

@@ -1,7 +1,10 @@
 @import "./var";
 
 @import "./style";
-@import "./index_page";
-@import "./cursor";
+@import "./resume_page";
 @import "./header";
 @import "./socials";
+
+
+@import "./components/cursor";
+@import "./components/lists";

@@ -1,0 +1,79 @@
+.work-experience{
+    grid-area: W;
+}
+.skills{
+    transition: 0.5s;
+    grid-area: S;
+}
+.Education{
+    grid-area: E;
+    
+}
+.certificates{
+    grid-area: C;
+}
+.next{
+    grid-area: N;
+}
+.socials{
+    grid-area: L;
+}
+.title{
+    grid-area: T;
+}
+
+.resume-page{
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    gap: 50px;
+    grid-template-areas: 
+    "T T"
+    "W S"
+    "E S"
+    "C S"
+    "N ."
+    "L L";
+
+
+
+
+
+    .list-circle{    
+        h3{
+            text-align: right;
+        }
+    a{
+        opacity: 1;
+        display: inline-block;
+
+        margin-bottom: 15px;
+    }
+
+    li{
+        border-left:none;
+        border-right:1px solid black ;  
+        
+        &::after{
+            left: auto;
+            right: -8px;
+        }
+    }
+
+}
+
+
+.list-caption{
+    text-align: right;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    margin-top: 30px;
+    text-transform: uppercase;
+
+}
+
+
+}
+
+
+
+
