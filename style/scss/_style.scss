@@ -1,11 +1,17 @@
+// font-family: 'Abril Fatface', cursive;
+// font-family: 'Bruno Ace', cursive;
+// font-family: 'Great Vibes', cursive;
+// font-family: 'Libre Baskerville', serif;
+// font-family: 'Playfair Display', serif;
+
 p {
   line-height: 2;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 0.8em;
   margin-bottom: 15px;
+font-family: 'Libre Baskerville', serif;
 }
 
-a.btn {
+.btn {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
   font-size: 0.9em;
@@ -14,9 +20,9 @@ a.btn {
   padding: 5px 15px;
   border-radius: 5px;
   background-color: $white-color;
-  transition: 0.2s;  
+  transition: 0.2s;
   opacity: 1;
-    
+
   &:focus,
   &:hover {
     background-color: $acent-color;
@@ -27,10 +33,7 @@ a.btn {
 
 body {
   padding: 0 0;
-
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap");
 
 // $color: #252526;
 // $color2: #313134;
@@ -47,8 +50,6 @@ $color5: #00ffbf;
 body {
   background: $main-color;
   min-height: 100vh;
-
- 
 }
 @function makelongshadow($color, $color2, $color3, $color4, $color5) {
   $val: 0px 0px $color;
@@ -96,23 +97,21 @@ body {
   font-weight: 600;
   line-height: 0.9;
   font-size: 7em;
-  @media  screen and (max-width: 960px) {
+  @media screen and (max-width: 960px) {
     font-size: 3em;
-}
+  }
   color: $main-color;
-  font-family: "Georgia";
   text-shadow: makelongshadow($color, $color2, $color3, $color4, $color5);
   animation-name: animateShadow;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+font-family: 'Libre Baskerville', serif;
 }
 
 html {
   cursor: pointer;
-  
+
   overflow-x: hidden;
-
-
 }
 
 a {
@@ -121,23 +120,28 @@ a {
 
 .content {
   padding: 5% 20%;
-  
-  @media  screen and (max-width: 1200px) {
+
+  @media screen and (max-width: 1200px) {
     padding: 5% 15%;
-}
-  @media  screen and (max-width: 700px) {
+  }
+  @media screen and (max-width: 700px) {
     padding: 5% 5%;
-}
+  }
 }
 
 main {
-  
   &::before {
-    content: '';
+    content: "";
     position: fixed;
     height: 100vh;
     width: 100vw;
-    background-image: repeating-linear-gradient(0deg, #00000010, #00000010 5px, transparent 5px, transparent);
+    background-image: repeating-linear-gradient(
+      0deg,
+      #00000010,
+      #00000010 5px,
+      transparent 5px,
+      transparent
+    );
     background-size: 200px 200px;
     background-color: #ffffff00;
     filter: blur(10px);
@@ -149,46 +153,44 @@ main {
     content: attr(data-text);
     position: fixed;
     white-space: nowrap;
-    font-size: 20em;
-    font-family:'Courier New', Courier, monospace;
+    font-size: 16vw;
+    font-family: "Bruno Ace", cursive;
     text-transform: capitalize;
     color: $black-color;
     opacity: 0.05;
     bottom: 0;
     z-index: -1;
+    letter-spacing: -10px;
   }
 }
 
-.next{
+.next {
   display: inline-block;
   padding: 15px;
   text-transform: capitalize;
   opacity: 0.9;
   font-size: 1.2em;
 
-  &:hover,&:focus{
+  &:hover,
+  &:focus {
     color: $acent-color;
   }
 
-  .arrow{
+  .arrow {
     animation: myAnim 2s ease 0s infinite normal forwards;
   }
 }
 @keyframes myAnim {
-	0% {
-		transform: translateX(0);
-	}
+  0% {
+    transform: translateX(0);
+  }
   80% {
-		transform: translateX(10px);
-	}
-	100% {
-		transform: translateX(0px);
-	}
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
-
-
-
-
 
 *,
 *::after,
@@ -203,7 +205,7 @@ main {
   padding: 0;
   list-style: none;
 
-  &::selection{
+  &::selection {
     background-color: $acent-color;
     color: $white-color;
   }
@@ -212,9 +214,9 @@ main {
 body {
   font-size: 18px;
 
-  @media  screen and (max-width: 960px) {
+  @media screen and (max-width: 960px) {
     font-size: 14px;
-}
+  }
 }
 
 a {
@@ -224,6 +226,8 @@ a {
   position: relative;
   opacity: 0.5;
 
+font-family: 'Playfair Display', serif;
+
   &:hover,
   &:focus {
     color: $black-color;
@@ -232,16 +236,15 @@ a {
 }
 
 a.hover {
-
-    &::after {
-      content: "";
-      position: absolute;
-      border: 0px solid $black-color;
-      width: 0px;
-      bottom: 0;
-      left: 50%;
-      transition: 0.5s;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    border: 0px solid $black-color;
+    width: 0px;
+    bottom: 0;
+    left: 50%;
+    transition: 0.5s;
+  }
 
   &:hover,
   &:focus {
@@ -256,10 +259,7 @@ a.hover {
     }
   }
 
-
-  &-short{
-
-
+  &-short {
     &::after {
       content: "";
       position: absolute;
@@ -284,7 +284,3 @@ a.hover {
     }
   }
 }
-
-
-
-

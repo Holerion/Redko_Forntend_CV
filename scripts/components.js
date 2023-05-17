@@ -1,7 +1,7 @@
 const linkedin = 'https://www.linkedin.com/in/alexander-red/';
 const github = 'https://github.com/Holerion';
-const instagram = '';
-const telegram = '';
+const instagram = 'https://instagram.com/_sanya_red_?igshid=MTIyMzRjYmRlZg==';
+const telegram = 'https://t.me/holerion';
 
 function render(){
     document.querySelector('.socials').innerHTML=`
