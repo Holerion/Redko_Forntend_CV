@@ -4,6 +4,11 @@
 .skills{
     transition: 0.5s;
     grid-area: S;
+    max-height: 800px;
+
+    @media screen and (max-width: 700px) {
+        scale: 0.8;
+    }
 }
 .Education{
     grid-area: E;
@@ -24,7 +29,7 @@
 
 .resume-page{
     display: grid;
-    grid-template-columns: 1fr 150px;
+    grid-template-columns: 1fr 150px;    
     gap: 50px;
     grid-template-areas: 
     "T T"
@@ -35,6 +40,10 @@
     "L L";
 
 
+    @media screen and (max-width: 700px) {        
+    grid-template-columns: 3fr 1fr;   
+    gap: 0px;
+    }
 
 
 

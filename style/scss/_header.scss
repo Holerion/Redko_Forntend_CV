@@ -23,6 +23,8 @@ header {
   .theme-switcher {
     display: flex;
     align-items: center;
+    color: rgba(0, 0, 0, 0.5);
+    cursor:crosshair;
   }
 
 
@@ -32,7 +34,10 @@ header {
 
   @media screen and (max-width: 700px) {
     padding-top: 100px;
-
+    .logo{
+      height: 250px;
+      margin-bottom: -100px;
+    }
     nav {
       transform: translateX(200vw);
 
@@ -43,13 +48,14 @@ header {
 
       margin: 0;
 
-      padding: 0% 10%;
+      padding: 0% 0%;
 
       display: flex;
       background-color: $main-color;
 
-      justify-content: space-between;
-      align-items: start;
+      justify-content: start;
+      align-items: center;
+      flex-direction: column;
 
       z-index: 100;
       ul {
@@ -60,6 +66,7 @@ header {
 
         li {
           margin-left: 10%;
+          margin-top: 15px;
         }
       }
     }
